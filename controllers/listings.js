@@ -39,7 +39,11 @@ module.exports.createListing = async (req, res, next) => {
   let newlisting = new Listing(listing); //instance
   newlisting.owner = req.user._id;
   newlisting.image = { filename, url };
-  await newlisting.save();
+  (newlisting.location = {
+    type: "Point",
+    coordinates: [req.body.listing.latitude, req.body.listing.longitude],
+  }),
+    await newlisting.save();
   console.log("Sample Was Saved ");
   req.flash("success", "New Listing Created ..!");
   res.redirect("/listings");

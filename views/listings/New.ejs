@@ -98,31 +98,4 @@
   </div>
 </div>
 
-<script>
-  function setLocation(event) {
-    event.preventDefault();
-
-    if (!navigator.geolocation) {
-      alert("Geolocation not supported");
-      return;
-    }
-
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        document.getElementById("latitude").value = position.coords.latitude;
-        document.getElementById("longitude").value = position.coords.longitude;
-
-        console.log(
-          document.getElementById("latitude").value,
-          document.getElementById("longitude").value
-        );
-
-        event.target.submit();
-      },
-      (error) => {
-        alert("Location permission denied or unavailable");
-      },
-      { enableHighAccuracy: true }
-    );
-  }
-</script>
+<script src="/js/getGeoLocation.js"></script>

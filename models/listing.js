@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Review = require("./review");
-const { ref } = require("joi");
+const { ref, string, required } = require("joi");
 const Schema = mongoose.Schema;
 
 const listingShema = new Schema({
@@ -30,8 +30,17 @@ const listingShema = new Schema({
   price: {
     type: Number,
   },
+
   location: {
-    type: String,
+    type: {
+      type: String,
+      enum: ["Point"],
+      required: true,
+    },
+    coordinates: {
+      type: [Number],
+      required: true,
+    },
   },
   country: {
     type: String,
