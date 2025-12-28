@@ -15,6 +15,7 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const PORT = process.env.PORT || 8080;
 
 const listingRouter = require("./Routes/Listing.js");
 const reviewRouter = require("./Routes/Review.js");
@@ -97,5 +98,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(8080, () => {
-  console.log("App is listen port 8080 ");
+  console.log(`http://localhost:${PORT}/`);
 });

@@ -9,6 +9,7 @@
       action="/listings"
       method="post"
       enctype="multipart/form-data"
+      onsubmit="setLocation(event)"
     >
       <div class="mb-3 mt-3">
         <label for="title" class="form-label">Enter Title</label>
@@ -86,6 +87,9 @@
         <div class="invalid-feedback">Location Should Be Valid</div>
       </div>
 
+      <input type="hidden" longitude id="latitude" />
+      <input type="hidden" name="longitude" id="longitude" />
+
       <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <button type="submit" class="btn btn-primary add-btn">Submit</button>
       </div>
@@ -93,3 +97,32 @@
     </form>
   </div>
 </div>
+
+<script>
+  function setLocation(event) {
+    event.preventDefault();
+
+    if (!navigator.geolocation) {
+      alert("Geolocation not supported");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        document.getElementById("latitude").value = position.coords.latitude;
+        document.getElementById("longitude").value = position.coords.longitude;
+
+        console.log(
+          document.getElementById("latitude").value,
+          document.getElementById("longitude").value
+        );
+
+        event.target.submit();
+      },
+      (error) => {
+        alert("Location permission denied or unavailable");
+      },
+      { enableHighAccuracy: true }
+    );
+  }
+</script>

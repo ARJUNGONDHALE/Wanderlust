@@ -28,7 +28,10 @@ module.exports.showListings = async (req, res) => {
 };
 
 module.exports.createListing = async (req, res, next) => {
-  //Error handling for If anyone send request that request have no data that time throw error
+  console.log(req.body);
+
+  // res.send("hello");
+
   let url = req.file.path;
   let filename = req.file.filename;
 
