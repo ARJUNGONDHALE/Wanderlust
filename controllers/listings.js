@@ -22,6 +22,7 @@ module.exports.showListings = async (req, res) => {
       },
     })
     .populate("owner");
+  console.log(listing);
   if (!listing) {
     req.flash("error", "listing you required for does not exist..!");
     return res.redirect("/listings");

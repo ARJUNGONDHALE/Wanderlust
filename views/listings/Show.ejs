@@ -13,11 +13,11 @@
     <div class="card-body">
       <p class="card-text">
         Owned By :
-        <i> <%= listing.owner.username %><br /></i>
+        <i> <%= listing.owner?.username %><br /></i>
       </p>
       <p class="card-text"><%= listing.description %></p>
       <p class="card-text">
-        &#x20B9;<%= listing.price.toLocaleString("en-IN") %>/nigh
+        &#x20B9;<%= listing.price.toLocaleString("en-IN") %>/Night
       </p>
 
       <p class="card-text"><%= listing.country %></p>
