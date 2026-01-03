@@ -2,7 +2,10 @@ const Listing = require("../models/listing");
 
 module.exports.index = async (req, res) => {
   console.log("This is home dir");
-  const AllListings = await Listing.find({});
+  const AllListings = await Listing.find({})
+    .sort({ createdAt: -1 })
+    .limit(15)
+    .select("title price image");
   res.render("listings/index.ejs", { AllListings });
 };
 module.exports.renderNewForm = (req, res) => {
@@ -28,10 +31,6 @@ module.exports.showListings = async (req, res) => {
 };
 
 module.exports.createListing = async (req, res, next) => {
-  console.log(req.body);
-
-  // res.send("hello");
-
   let url = req.file.path;
   let filename = req.file.filename;
 
@@ -39,11 +38,12 @@ module.exports.createListing = async (req, res, next) => {
   let newlisting = new Listing(listing); //instance
   newlisting.owner = req.user._id;
   newlisting.image = { filename, url };
-  (newlisting.location = {
+  (newlisting.geometry = {
     type: "Point",
     coordinates: [req.body.listing.latitude, req.body.listing.longitude],
   }),
-    await newlisting.save();
+    (savedListing = await newlisting.save());
+  console.log(savedListing);
   console.log("Sample Was Saved ");
   req.flash("success", "New Listing Created ..!");
   res.redirect("/listings");

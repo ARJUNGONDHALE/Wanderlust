@@ -1,4 +1,5 @@
 <% layout('/layouts/boilerplate') %>
+<script></script>
 <div class="row mt-2">
   <div class="col-md-8 justify-content-center offset-md-3">
     <h2><b> <%= listing.title %></b></h2>
@@ -150,20 +151,17 @@
   </div>
 
   <!-- ADD MAP -->
-  <div
-    id="map"
-    class="card col-md-8 offset-md-2 mt-3 show-card Listing-card"
-  ></div>
+  <div id="map" class="col-md-8 offset-md-2 mb-3"></div>
 
   <input
     type="hidden"
-    value="<%= listing.location?.coordinates?.[0] %>"
+    value="<%= listing.geometry?.coordinates?.[0] %>"
     name="listing[latitude]"
     id="latitude"
   />
   <input
     type="hidden"
-    value="<%= listing.location?.coordinates?.[1] %>"
+    value="<%= listing.geometry?.coordinates?.[1] %>"
     name="listing[longitude]"
     id="longitude"
   />
@@ -175,4 +173,11 @@
   crossorigin=""
 ></script>
 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.js"></script> -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"
+  integrity="sha512-8BqQ2RH4L4sQhV41ZB24fUc1nGcjmrTA6DILV/aTPYuUzo+wBdYdp0fvQ76Sxgf36p787CXF7TktWlcxu/zyOg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 <script src="/js/map.js"></script>

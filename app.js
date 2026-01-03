@@ -84,9 +84,9 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-app.get("/", (req, res) => {
-  res.send("This is root dir");
-});
+// app.get("/", (req, res) => {
+//   res.send("This is root dir");
+// });
 
 //Error Handaling
 app.use((req, res, next) => {
@@ -98,5 +98,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(8080, () => {
-  console.log(`http://localhost:${PORT}/`);
+  console.log(`http://localhost:${PORT}/listings`);
 });

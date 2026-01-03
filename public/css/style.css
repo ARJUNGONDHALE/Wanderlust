@@ -59,6 +59,7 @@ body {
 }
 .card-img-top {
   border-radius: 0.5rem !important;
+  height: 20rem !important;
   width: 100% !important;
   object-fit: cover !important;
 }
@@ -112,7 +113,7 @@ body {
 /* map  */
 #map {
   height: 300px;
-  width: 100%;
+
   margin-top: 20px;
   border-radius: 10px;
 }
