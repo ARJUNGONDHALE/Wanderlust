@@ -17,7 +17,7 @@ const sampleListings = [
     description: "Stylish loft in the heart of the city.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://images.unsplash.com/photo-1716737954364-2a7b14a3301f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 5000,
@@ -30,7 +30,7 @@ const sampleListings = [
     description: "Secluded cabin surrounded by mountains.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 4000,
@@ -43,7 +43,7 @@ const sampleListings = [
     description: "Historic villa in Tuscany.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 1000,
@@ -56,7 +56,7 @@ const sampleListings = [
     description: "Luxury condo near the beach.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
@@ -69,7 +69,7 @@ const sampleListings = [
     description: "Chalet in the Swiss Alps.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://plus.unsplash.com/premium_photo-1676968002512-3eac82b1d847?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 4500,
@@ -82,7 +82,7 @@ const sampleListings = [
     description: "Compact modern apartment in Tokyo.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://plus.unsplash.com/premium_photo-1676968002945-c8f74e0e27d8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
@@ -95,7 +95,7 @@ const sampleListings = [
     description: "Luxury villa in the desert.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://images.unsplash.com/photo-1584738766473-61c083514bf4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 4000,
@@ -108,7 +108,7 @@ const sampleListings = [
     description: "Traditional villa overlooking Jaipur.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://plus.unsplash.com/premium_photo-1689609949905-0d27dac6c38e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
@@ -121,7 +121,7 @@ const sampleListings = [
     description: "Peaceful houseboat stay.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
@@ -134,7 +134,7 @@ const sampleListings = [
     description: "Minimal hut near the sea.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://plus.unsplash.com/premium_photo-1686090450488-48ce19426bbe?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
@@ -147,7 +147,7 @@ const sampleListings = [
     description: "Snow-view chalet in the Himalayas.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
@@ -160,7 +160,7 @@ const sampleListings = [
     description: "Studio apartment in the city.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://plus.unsplash.com/premium_photo-1736194027911-c9ba731f330d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
@@ -173,7 +173,7 @@ const sampleListings = [
     description: "Calm stay beside the river.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?q=80&w=967&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
 
     owner: "69591af54822edf4b2f5d9b0",
@@ -187,7 +187,7 @@ const sampleListings = [
     description: "Five-star hotel in city center.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1767173760312-d6fa1304c3a3?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0",
+      url: "https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?q=80&w=1181&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     owner: "69591af54822edf4b2f5d9b0",
     price: 3000,
