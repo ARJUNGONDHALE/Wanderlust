@@ -111,6 +111,10 @@ app.use((err, req, res, next) => {
   res.status(status).render("listings/error.ejs", { err });
 });
 
-app.listen(8080, () => {
-  console.log(`http://localhost:${PORT}/listings`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
+// app.listen(8080, () => {
+//   console.log(`http://localhost:${PORT}/listings`);
+// });
