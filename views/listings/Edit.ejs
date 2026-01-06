@@ -10,6 +10,7 @@
       novalidate
       action="/listings/<%= listing.id %>?_method=put"
       enctype="multipart/form-data"
+      onsubmit="setLocation(event)"
     >
       <div class="mb-3">
         <label class="form-label fw-semibold">Current Image</label>
@@ -105,6 +106,10 @@
         />
         <div class="invalid-feedback">Location Should Be Valid</div>
       </div>
+
+      <input type="hidden" name="listing[latitude]" id="latitude" />
+      <input type="hidden" name="listing[longitude]" id="longitude" />
+
       <div class="d-flex gap-3 justify-content-center mt-4 mb-4">
         <button class="btn btn-primary px-4">Update Listing</button>
         <a href="/listings/<%= listing.id %>" class="btn btn-outline-secondary">
@@ -114,3 +119,5 @@
     </form>
   </div>
 </div>
+
+<script src="/js/getGeoLocation.js"></script>
