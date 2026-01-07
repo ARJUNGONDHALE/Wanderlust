@@ -9,7 +9,7 @@ module.exports.index = async (req, res) => {
   res.render("listings/index.ejs", { AllListings });
 };
 module.exports.renderNewForm = (req, res) => {
-  res.render("listings/New.ejs");
+  res.render("listings/new.ejs");
 };
 
 module.exports.showListings = async (req, res) => {
@@ -61,7 +61,7 @@ module.exports.renderEditeForm = async (req, res) => {
     "/upload",
     "/upload/h_300,w_250"
   );
-  return res.render("listings/Edit.ejs", { listing, orignalImageUrl });
+  return res.render("listings/edit.ejs", { listing, orignalImageUrl });
 };
 
 module.exports.updateListing = async (req, res) => {
