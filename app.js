@@ -98,9 +98,9 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-// app.get("/", (req, res) => {
-//   res.send("This is root dir");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 //Error Handaling
 app.use((req, res, next) => {
