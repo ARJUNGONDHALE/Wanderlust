@@ -30,5 +30,10 @@ async function setLocation(event) {
     event.target.submit();
   } catch (e) {
     console.log(e);
+    const errorDiv = document.getElementById("locationError");
+    errorDiv.innerHTML = `<p>Error:${
+      e.message || "Something Went Wrong Please Check Your Location..!"
+    }</p>`;
+    errorDiv.classList.remove("d-none");
   }
 }

@@ -1,8 +1,11 @@
+const path = require("path");
+const dotenv = require("dotenv");
+dotenv.config({ path: path.resolve(process.cwd(), "../", ".env") });
 const mongoose = require("mongoose");
 const listing = require("../models/listing.js");
 const initdata = require("./data.js");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
 main()
   .then(() => {
@@ -13,7 +16,8 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  console.log(process.env.ATLASDB_URL);
+  await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 const initDB = async () => {
@@ -24,4 +28,4 @@ const initDB = async () => {
   await listing.insertMany(initdata.data);
   console.log("Data Was Inishalize");
 };
-initDB();
+// initDB();
