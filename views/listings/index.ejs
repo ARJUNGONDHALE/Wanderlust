@@ -23,7 +23,6 @@
     display: none;
   }
   .tax-toggle {
-    border: 1px solid black;
     height: 2.8rem;
     padding: 0.5rem;
     border-radius: 8px;
@@ -31,6 +30,35 @@
     display: flex;
     align-items: center;
   }
+
+  .favourite-btn-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+    }
+
+.favourite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+
+.fa-heart {
+  color: #ff385c;
+  font-size: 1.2rem;
+}
+
+.fa-heart:hover {
+  color: orange;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
 </style>
 
 <!-- Categiry -->
@@ -118,6 +146,18 @@
           <i class="tax-info">&nbsp; &nbsp; +18% GST</i>
         </p>
       </div>
+
+      <div class="favourite-btn-container">
+        <% if (list.isFavourite) { %>
+            <button id="<%= list._id %>_favourateBtn" onClick="removeFavourite('<%= list._id %>')" class="favourite-btn">
+                <i class="fa-solid fa-heart"></i>
+            </button>
+        <% } else {%>
+            <button id="<%= list._id %>_favourateBtn" onClick="addFavourite('<%= list._id %>')" class="favourite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+        <% } %>
+      </div>
     </div>
   </a>
 
@@ -135,4 +175,52 @@
       }
     }
   });
+
+  function addFavourite(listingId) {
+      event.stopPropagation();
+      event.preventDefault();
+      console.log(listingId);
+    ;(async () => {
+      try {
+        const response = await fetch(`/favourite/add/${listingId}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (response.ok) {
+          const btn = document.getElementById(`${listingId}_favourateBtn`);
+          btn.innerHTML = `<i class="fa-solid fa-heart"></i>`;
+          btn.onclick = () => removeFavourite(listingId);
+        } else {
+            console.log(response)
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    })()
+  }
+
+  function removeFavourite(listingId) {
+      event.stopPropagation();
+      event.preventDefault();
+      ;(async () => {
+        try {
+          const response = await fetch(`/favourite/remove/${listingId}`, {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+          console.log(response);
+          if (response.ok) {
+            const btn = document.getElementById(`${listingId}_favourateBtn`);
+            btn.innerHTML = `<i class="fa-regular fa-heart"></i>`;
+            btn.onclick = () => addFavourite(listingId);
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      })()
+  }
 </script>
