@@ -7,7 +7,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "db:init": "cd init && node init.js"
+    "db:init": "cd init && node init.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "Arjun Gondhale",
@@ -33,6 +34,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.11",
-    "quar": "^1.2.7"
+    "quar": "^1.4.2"
   }
 }

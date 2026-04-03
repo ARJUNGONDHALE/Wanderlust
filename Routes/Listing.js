@@ -11,35 +11,36 @@ const { storage } = require("../cloudConfig.js");
 const upload = multer({ storage });
 
 router
-  .route("/")
-  .get(wrapAsync(listingController.index))
-  .post(
-    isLogin,
-    upload.single("listing[image]"),
-    validateListing,
-    wrapAsync(listingController.createListing)
-  );
+    .route("/")
+    .get(wrapAsync(listingController.index))
+    .post(
+        isLogin,
+        upload.single("listing[image]"),
+        validateListing,
+        wrapAsync(listingController.createListing),
+    );
 
 router.get("/new", isLogin, listingController.renderNewForm);
+router.get("/cart", isLogin, listingController.renderCart);
 
 router
-  .route("/:id")
-  .put(
-    isLogin,
-    isOwner,
-    upload.single("listing[image]"),
-    validateListing,
-    wrapAsync(listingController.updateListing)
-  )
-  .delete(isLogin, isOwner, wrapAsync(listingController.destroyListing))
-  .get(wrapAsync(listingController.showListings));
+    .route("/:id")
+    .put(
+        isLogin,
+        isOwner,
+        upload.single("listing[image]"),
+        validateListing,
+        wrapAsync(listingController.updateListing),
+    )
+    .delete(isLogin, isOwner, wrapAsync(listingController.destroyListing))
+    .get(wrapAsync(listingController.showListings));
 
 //Edite Route
 router.get(
-  "/:id/edit",
-  isLogin,
-  isOwner,
-  wrapAsync(listingController.renderEditeForm)
+    "/:id/edit",
+    isLogin,
+    isOwner,
+    wrapAsync(listingController.renderEditeForm),
 );
 
 module.exports = router;
